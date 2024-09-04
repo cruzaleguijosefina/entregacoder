@@ -1,0 +1,87 @@
+footer{
+    background-color:  rgb(252, 242, 242); 
+    padding: 20px;
+    text-align: center;
+    max-width: 100%;
+    
+    .footer-container{
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        gap: 20px; 
+        align-items: start; 
+        font-size: 18px;
+        margin-top: 30px;
+
+        h2{
+            font-size: calc(16px) 
+        }
+    }
+    .footer-column{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+    #navfooter{
+        ul{
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+            li{
+                margin: 5px 0;
+            }
+                a{
+                    text-decoration: none;
+                    color: #000;
+                }
+    }
+    .newsletter{
+        form{
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+
+            input{
+                margin-bottom: 10px;
+                padding: 10px;
+                width: 100%;
+                max-width: 200px;
+            }
+            button img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    .redsocial{
+        display: inline-block;
+        margin: 0 5px; 
+
+        a{
+            margin: 0 10px;   
+            img{
+                width: 30px;
+                height: 30px;
+                align-items: center;
+                margin-top: 20px;
+            }
+        }
+    }
+    .whatsapp{
+        a{
+            max-width: 70%;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            img{
+                width: 40px; 
+                height: auto;
+            }
+        }
+    }
+}

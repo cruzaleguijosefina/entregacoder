@@ -36,7 +36,6 @@ header, .navbar {
     z-index: 2;
     display: flex;
     flex-direction: column;
-
 }
 
 
@@ -309,6 +308,203 @@ padding: 20px;
 }
     
 
+/*!----PÁGINA DE PLANTAS----*/
+
+.galeria {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    gap: 5px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.galeria div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.grid-item h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  #3333336c;
+    color: white;
+    opacity: 0;
+    margin: 0;
+    transition: opacity 0.3s ease;
+    font-size: 1.2rem;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.galeria div:hover h3 {
+    opacity: 1;
+}
+
+.img4 {
+    grid-column: span 2;
+}
+
+.img9 {
+    grid-column: span 3;
+}
+
+.img3,
+.img6,
+.img7 {
+    grid-row: span 2;
+}
+/*!----CONTACTANOS----*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.story-section,
+.contact-form {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f5f4f4fd;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-section h2 {
+    font-size: 24px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.story-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.contact-form {
+    background-color: #f4f4f455;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color:#333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:#555;
+}
+
+/*!----SERVICIOS----*/
+
+.servicios {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-auto-rows: 300px; 
+    gap: 10px;
+    padding: 10px; 
+}
+
+.item-servicio {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.item-servicio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+}
+
+.img-hover {
+    opacity: 0;
+}
+
+.item-servicio:hover .img-hover {
+    opacity: 1;
+}
+
+.item-servicio:hover .img-default {
+    opacity: 0;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 90%;
+    text-align: center;
+    background-color: rgba(51, 51, 51, 0.329); 
+    color:white; 
+    padding: 15px; 
+    box-sizing: border-box;
+    border-radius: 8px; 
+    z-index: 1;
+}
+
+.text-overlay h3 {
+    margin: 0;
+    font-size: 1.2rem; 
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400; 
+    line-height: 1.4; 
+}
 
 /*!----FOOTER----*/
 
@@ -377,7 +573,16 @@ footer form input {
 footer form button img {
     width: 20px;
     height: 20px;
+    
 
+}
+
+footer form button{
+    background-color: #00000000;
+}
+
+footer form button:hover {
+    background-color:#55555500;
 }
 
 .redsocial a {
@@ -420,9 +625,16 @@ footer form button img {
 
 
 @media (min-width: 768px) {
-    .grid-container, .maceta-container {
+    .grid-container, .maceta-container{
         grid-template-columns: repeat(3, 1fr); 
         grid-template-rows: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .servicios{
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows: 500px;
     }
 }
 
@@ -430,8 +642,9 @@ footer form button img {
     .navbar {
         display: flex;
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
     }
+
 
     .navbar-collapse {
         display: flex;
@@ -465,5 +678,30 @@ footer form button img {
 
     .text-container {
         order: 1;
+    }
+}
+
+@media (min-width: 992px){   
+    #navbarNav{
+        justify-content: center;
+    }
+    .container {
+        flex-direction: row;
+    }
+    .story-section,
+    .contact-form {
+        width: 50%;
+        padding: 40px;
+    }
+    .story-section h2 {
+        font-size: 28px;
+    }
+
+    .story-section p {
+        line-height: 2;
+    }
+
+    .contact-form h2 {
+        font-size: 24px;
     }
 }
