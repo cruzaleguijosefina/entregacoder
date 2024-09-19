@@ -1,5 +1,6 @@
+// HEADER
 header {
-    background-color: rgb(252, 242, 242);
+    background-color: $color-bg;
     .navbar {
         position: sticky;
         top: 0;
@@ -19,5 +20,6 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
+        color: $color-principal;
     }
 }

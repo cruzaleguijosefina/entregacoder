@@ -1,22 +1,4 @@
-/*!----MEDIA QUERIES----*/
-
-@media (min-width: 768px) {
-
-    .maceta-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(1, 1fr);
-        gap: 20px;
-
-        a {
-            width: 100%;
-
-            img {
-                width: 100%
-            }
-        }
-    }
-}
+// MEDIA QUERIES
 
 @media (max-width: 992px) {
     .navbar {
@@ -39,6 +21,27 @@
 }
 
 @media (min-width: 768px) {
+
+    // INDEX
+    main {
+        .favoritas-section {
+            .maceta-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(1, 1fr);
+                gap: 20px;
+            }
+        }
+
+        a {
+            width: 100%;
+
+            img {
+                width: 100%
+            }
+        }
+    }
+
     main {
         .oasis-container {
             flex-direction: row;
@@ -70,6 +73,7 @@
 
     }
 
+    // QUIENES-SOMOS
     main {
         #container-qs {
             grid-template-columns: repeat(2, 1fr);
@@ -85,8 +89,62 @@
             }
         }
     }
-}
 
+    // PLANTAS
+    main {
+        .galeria {
+
+            .grid-item {
+                a {
+                    h3 {
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                    }
+                }
+            }
+
+            .grid-item:hover {
+                a {
+                    h3 {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .img4 {
+                grid-column: span 2;
+            }
+
+            .img9 {
+                grid-column: span 3;
+            }
+
+            .img3,
+            .img6,
+            .img7 {
+                grid-row: span 2;
+            }
+        }
+    }
+
+    // MACETAS
+    .macetas {
+        .maceta-section {
+            .maceta-container {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(1, 1fr);
+            }
+        }
+    }
+
+    // SERVICIOS
+    main {
+        .servicios {
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 500px;
+        }
+    }
+}
 
 @media (min-width: 992px) {
     #navbarNav {
@@ -97,6 +155,6 @@
 @media (max-width: 991px) {
     #navbarNav {
         background-color: rgb(252, 242, 242);
+        margin-top: 12px;
     }
-
 }

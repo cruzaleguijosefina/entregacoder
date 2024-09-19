@@ -1,0 +1,77 @@
+// MACETAS
+.macetas {
+    padding: 20px;
+
+    .maceta-section {
+        margin-bottom: 40px;
+
+        .maceta-encabezado {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-top: 50px;
+            font-style: initial;
+            font-size: 25px;
+            letter-spacing: 10px;
+        }
+
+        .maceta-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 20px;
+
+            .maceta-individual {
+                text-align: center;
+                margin-bottom: 20px;
+
+                img {
+                    height: 450px;
+                    width: auto;
+                    object-fit: cover;
+                    max-width: 100%;
+                    display: block;
+                    margin: 0 auto;                
+                }
+
+                .descripcionmaceta {
+                    font-size: 15px;
+                    font-weight: bold;
+                    margin: 10px 0;
+                    letter-spacing: 2px;
+                }
+
+                .maceta-button {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    font-size: 13px;
+                    color: rgb(239, 232, 232);
+                    background-color: #333;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    text-decoration: none;
+                    transition: initial;
+                    width:30%;
+                    text-align: center;
+                }
+
+
+                .maceta-button:hover {
+                    background-color: #555;
+                }
+
+            }
+        }
+    }
+
+    .section-divider {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 40px 0;
+        width: 50%;
+    }
+
+}

@@ -1,3 +1,4 @@
+// QUIENES SOMOS
 main {
     #container-qs {
         display: grid;
@@ -12,7 +13,7 @@ main {
             height: 100%;
             padding: 20px;
             box-sizing: border-box;
-            background-color: #f5f4f4fd;
+            background-color:nth($colores, 6);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -37,7 +38,7 @@ main {
             height: 100%;
             padding: 20px;
             box-sizing: border-box;
-            background-color: #f4f4f455;
+            background-color: nth($colores, 7);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -64,7 +65,7 @@ main {
                 textarea {
                     width: 100%;
                     padding: 10px;
-                    border: 1px solid #ccc;
+                    border: 1px solid nth($colores, 8);
                     border-radius: 3px;
                     box-sizing: border-box;
                 }
@@ -78,7 +79,7 @@ main {
                 cursor: pointer;
 
                 &:hover {
-                    background-color: #ccc;
+                    background-color: nth($colores, 8);
                 }
             }
         }

@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 ::selection {
   background-color: rgba(151, 151, 151, 0.845);
-  color: white; }
+  color: #d6d6d6; }
 
-/*!----RESET----*/
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +18,6 @@ body {
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden; }
 
-/*!----BOTONES----*/
 .button {
   display: inline-block;
   padding: 15px 30px;
@@ -94,7 +92,8 @@ header {
     letter-spacing: 10px;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    color: #393939; }
 
 main .hero {
   max-width: 100%;
@@ -108,16 +107,17 @@ main .hero {
   background-attachment: fixed;
   background-image: url(../img/interiorplantas.jpg); }
   main .hero .herotext {
-    background-color: rgba(94, 123, 100, 0.642);
+    text-align: center;
+    background-color: #f4f4f4ab;
     border-radius: 15px;
     font-family: 'Courier New', Courier, monospace;
-    color: black;
+    color: #393939;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     box-sizing: content-box;
-    width: 50%;
+    width: 70%;
     border: 0px;
     padding: 20px; }
 
@@ -138,58 +138,60 @@ main .oasis-container {
 main .text-container {
   width: 100%;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  margin-top: 40px; }
 
 main .favoritas-section {
   max-width: 100%; }
   main .favoritas-section .favoritas-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     width: 60%;
     max-width: 1200px;
     align-items: center;
     gap: 20px;
     margin: 30px; }
-    main .favoritas-section .favoritas-container .grid-container {
-      max-width: 100%;
-      height: 100%;
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      gap: 10px;
-      margin: 20px 0; }
-      main .favoritas-section .favoritas-container .grid-container a {
-        display: block;
-        position: relative; }
-        main .favoritas-section .favoritas-container .grid-container a img {
-          width: 100%;
-          height: auto;
-          transition: opacity 0.3s ease; }
-          main .favoritas-section .favoritas-container .grid-container a img:hover {
-            opacity: 0.5; }
-      main .favoritas-section .favoritas-container .grid-container #carouselExampleFade {
+  main .favoritas-section .maceta-container {
+    max-width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0; }
+    main .favoritas-section .maceta-container a {
+      display: block;
+      position: relative; }
+      main .favoritas-section .maceta-container a img {
+        width: 100%;
+        height: auto;
+        transition: opacity 0.3s ease;
+        margin-bottom: 20px;
+        margin-top: 20px; }
+        main .favoritas-section .maceta-container a img:hover {
+          opacity: 0.5; }
+      main .favoritas-section .maceta-container a #carouselExampleFade {
         width: 100vw;
         height: 100vh;
         position: relative;
         overflow: hidden; }
-        main .favoritas-section .favoritas-container .grid-container #carouselExampleFade .carousel-inner {
+        main .favoritas-section .maceta-container a #carouselExampleFade .carousel-inner {
           width: 100%;
           height: 100%; }
-          main .favoritas-section .favoritas-container .grid-container #carouselExampleFade .carousel-inner .carousel-item img {
+          main .favoritas-section .maceta-container a #carouselExampleFade .carousel-inner .carousel-item img {
             width: 100%;
             height: 100%;
             object-fit: cover; }
-      main .favoritas-section .favoritas-container .grid-container .text-container .right-text {
+      main .favoritas-section .maceta-container a .text-container .right-text {
         grid-column: 1 / 2;
         text-align: right;
         font-weight: 700; }
-      main .favoritas-section .favoritas-container .grid-container .left-text {
+      main .favoritas-section .maceta-container a .left-text {
         grid-column: 2 / 3;
         text-align: left;
         font-weight: 300;
         font-style: inherit;
         letter-spacing: 0, 9px; }
-      main .favoritas-section .favoritas-container .grid-container .button-container {
+      main .favoritas-section .maceta-container a .button-container {
         display: flex;
         justify-content: center;
         margin-top: 0px; }
@@ -197,6 +199,9 @@ main .favoritas-section {
     display: flex;
     justify-content: center;
     margin-top: 0px; }
+    main .favoritas-section .button-container .button {
+      margin-top: -10px;
+      width: 30%; }
 
 main .container {
   display: flex;
@@ -235,7 +240,7 @@ footer {
     margin: 5px 0; }
   footer #navfooter a {
     text-decoration: none;
-    color: #000; }
+    color: #393939; }
   footer .newsletter form {
     max-width: 100%;
     display: flex;
@@ -300,7 +305,7 @@ main #container-qs {
     height: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #f4f4f455;
+    background-color: #f4f4f4ab;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -333,17 +338,139 @@ main #container-qs {
       main #container-qs .contact-form button:hover {
         background-color: #ccc; }
 
-/*!----MEDIA QUERIES----*/
-@media (min-width: 768px) {
-  .maceta-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    gap: 20px; }
-    .maceta-container a {
-      width: 100%; }
-      .maceta-container a img {
-        width: 100%; } }
+.macetas {
+  padding: 20px; }
+  .macetas .maceta-section {
+    margin-bottom: 40px; }
+    .macetas .maceta-section .maceta-encabezado {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-top: 50px;
+      font-style: initial;
+      font-size: 25px;
+      letter-spacing: 10px; }
+    .macetas .maceta-section .maceta-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 20px; }
+      .macetas .maceta-section .maceta-container .maceta-individual {
+        text-align: center;
+        margin-bottom: 20px; }
+        .macetas .maceta-section .maceta-container .maceta-individual img {
+          height: 450px;
+          width: auto;
+          object-fit: cover;
+          max-width: 100%;
+          display: block;
+          margin: 0 auto; }
+        .macetas .maceta-section .maceta-container .maceta-individual .descripcionmaceta {
+          font-size: 15px;
+          font-weight: bold;
+          margin: 10px 0;
+          letter-spacing: 2px; }
+        .macetas .maceta-section .maceta-container .maceta-individual .maceta-button {
+          display: inline-block;
+          padding: 10px 20px;
+          text-decoration: none;
+          border-radius: 5px;
+          margin-top: 10px;
+          font-size: 13px;
+          color: #efe8e8;
+          background-color: #333;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          text-decoration: none;
+          transition: initial;
+          width: 30%;
+          text-align: center; }
+        .macetas .maceta-section .maceta-container .maceta-individual .maceta-button:hover {
+          background-color: #555; }
+  .macetas .section-divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 40px 0;
+    width: 50%; }
+
+main .galeria {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 250px;
+  gap: 5px; }
+  main .galeria .grid-item {
+    position: relative;
+    overflow: hidden; }
+    main .galeria .grid-item a img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block; }
+    main .galeria .grid-item a h3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #3333336c;
+      color: white;
+      opacity: 100%;
+      margin: 0;
+      transition: opacity 0.3s ease;
+      font-size: 1.2rem;
+      z-index: 1;
+      pointer-events: none; }
+
+/*!----SERVICIOS----*/
+main .servicios {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 300px;
+  gap: 10px;
+  padding: 10px; }
+  main .servicios .item-servicio {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+    main .servicios .item-servicio img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.3s ease; }
+    main .servicios .item-servicio .img-hover {
+      opacity: 0; }
+    main .servicios .item-servicio .text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      text-align: center;
+      background-color: rgba(51, 51, 51, 0.329);
+      color: white;
+      padding: 15px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      z-index: 1; }
+      main .servicios .item-servicio .text-overlay h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        line-height: 1.4; }
+  main .servicios .item-servicio:hover .img-hover {
+    opacity: 1; }
+  main .servicios .item-servicio:hover .img-default {
+    opacity: 0; }
 
 @media (max-width: 992px) {
   .navbar {
@@ -360,6 +487,15 @@ main #container-qs {
     margin: 0 auto; } }
 
 @media (min-width: 768px) {
+  main .favoritas-section .maceta-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 20px; }
+  main a {
+    width: 100%; }
+    main a img {
+      width: 100%; }
   main .oasis-container {
     flex-direction: row;
     justify-content: space-between;
@@ -384,7 +520,26 @@ main #container-qs {
     main #container-qs .story-section {
       flex-direction: column; }
     main #container-qs .contact-form {
-      flex-direction: column; } }
+      flex-direction: column; }
+  main .galeria .grid-item a h3 {
+    opacity: 0;
+    transition: opacity 0.3s ease; }
+  main .galeria .grid-item:hover a h3 {
+    opacity: 1; }
+  main .galeria .img4 {
+    grid-column: span 2; }
+  main .galeria .img9 {
+    grid-column: span 3; }
+  main .galeria .img3,
+  main .galeria .img6,
+  main .galeria .img7 {
+    grid-row: span 2; }
+  .macetas .maceta-section .maceta-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr); }
+  main .servicios {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 500px; } }
 
 @media (min-width: 992px) {
   #navbarNav {
@@ -392,4 +547,5 @@ main #container-qs {
 
 @media (max-width: 991px) {
   #navbarNav {
-    background-color: #fcf2f2; } }
+    background-color: #fcf2f2;
+    margin-top: 12px; } }

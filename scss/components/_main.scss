@@ -1,3 +1,4 @@
+// INDEX
 main {
     .hero {
         max-width: 100%;
@@ -12,16 +13,17 @@ main {
         background-image: url(../img/interiorplantas.jpg);
 
         .herotext {
-            background-color:  rgba(94, 123, 100, 0.642);
+            text-align: center;
+            background-color: nth($colores, 7);
             border-radius: 15px;
             font-family: 'Courier New', Courier, monospace;
-            color: black;
+            color:$color-principal;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
             box-sizing: content-box;
-            width: 50%;
+            width: 70%;
             border: 0px;
             padding: 20px;
         }
@@ -45,13 +47,14 @@ main {
         .image-side {
             max-width: 100%;
             height: auto;
-        }
+        }    
     }
 
     .text-container {
         width: 100%;
         align-items: center;
         text-align: center;
+        margin-top: 40px;
     }
 
     .favoritas-section {
@@ -59,14 +62,13 @@ main {
 
         .favoritas-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
             width: 60%;
             max-width: 1200px;
             align-items: center;
             gap: 20px;
             margin: 30px;
-
-            .grid-container {
+        }
+            .maceta-container {
                 max-width: 100%;
                 height: 100%;
                 display: grid;
@@ -83,13 +85,14 @@ main {
                         width: 100%;
                         height: auto;
                         transition: opacity 0.3s ease;
+                        margin-bottom: 20px;
+                        margin-top: 20px;
+    
 
                         &:hover {
                             opacity: 0.5;
                         }
-                    }
                 }
-
 
 
                 #carouselExampleFade {
@@ -140,6 +143,10 @@ main {
             display: flex;
             justify-content: center;
             margin-top: 0px;
+            .button{
+                margin-top: -10px;
+                width: 30%;
+            }
         }
     }
 

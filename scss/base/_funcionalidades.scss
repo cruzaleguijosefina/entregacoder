@@ -1,14 +1,20 @@
+//VARIABLES
+$color-principal: rgb(57, 57, 57);
+$color-bg: rgb(252, 242, 242);
+
 ::selection {
     background-color: rgba(151, 151, 151, 0.845);
-    color: white;
+    color: rgb(214, 214, 214);
 }
 
-//VARIABLES
+//LISTAS 
 
-//LISTAS
+$colores: #555, #fff, #333, #fcf2f2, #393939, #f5f4f4fd, #f4f4f4ab, #ccc;
 
 
-//EXTENDS
-
-//MIXIN
+//EXTEND
+%enlaces {
+    text-decoration: none;
+    color: black;
+}
 

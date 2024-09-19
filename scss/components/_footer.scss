@@ -1,3 +1,4 @@
+// FOOTER
 footer{
     background-color:  rgb(252, 242, 242); 
     padding: 20px;
@@ -35,7 +36,7 @@ footer{
             }
                 a{
                     text-decoration: none;
-                    color: #000;
+                    color: $color-principal;
                 }
     }
     .newsletter{
